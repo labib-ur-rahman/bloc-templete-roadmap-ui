@@ -1,0 +1,561 @@
+{
+  "shared": {
+    "get_started": "Get Started"
+  },
+  "onboarding": {
+    "onboarding_title_1": "Your Journey,\nPerfectly Planned",
+    "onboarding_subtitle_1": "Effortlessly create and organize your\ndream trips. Start exploring now!",
+    "onboarding_title_2": "Discover\nFriends Nearby",
+    "onboarding_subtitle_2": "See where your friends are traveling and\nexplore the world together.",
+    "onboarding_title_3": "Stay Updated\nwith Top Places",
+    "onboarding_subtitle_3": "Find trending destinations and must-see attractions,\nall tailored to enhance your travel plans."
+  },
+  "home": {
+    "home_title": "Home",
+    "welcome_home": "Welcome Home!",
+    "home_subtitle": "You have successfully completed the onboarding process."
+  },
+  "roadmap": {
+    "eyebrow": "ACADEMIA BLOC TEMPLATE",
+    "title": "Aprende el proyecto, capa por capa.",
+    "subtitle": "Una ruta practica desde abrir el repositorio hasta crear, probar y publicar funciones con confianza.",
+    "modules": "modulos de aprendizaje",
+    "level": "nivel inicial",
+    "beginner": "Principiante",
+    "lesson_coming_soon": "Los detalles de la leccion estan planeados para el siguiente paso.",
+    "items": {
+      "foundations": {
+        "title": "Fundamentos del proyecto",
+        "description": "Lee el mapa del repositorio, los paquetes, las guias y las reglas de nombres antes de cambiar codigo."
+      },
+      "startup": {
+        "title": "Inicio de la app y wrappers",
+        "description": "Sigue la ejecucion desde main() por la configuracion, localizacion, providers y MaterialApp."
+      },
+      "design": {
+        "title": "Sistema de diseno e interfaz adaptable",
+        "description": "Crea interfaces claras y oscuras consistentes con temas, tokens, widgets compartidos y ScreenUtil."
+      },
+      "architecture": {
+        "title": "Arquitectura feature-first",
+        "description": "Comprende los limites de cada funcion y como colaboran las capas de presentacion, dominio y datos."
+      },
+      "bloc": {
+        "title": "Gestion de estado con BLoC",
+        "description": "Modela eventos y estados inmutables, simplifica handlers y separa reconstrucciones de efectos."
+      },
+      "routing": {
+        "title": "Rutas y navegacion",
+        "description": "Aprende rutas GoRouter centralizadas, pila, redirecciones, guards y futura navegacion de lecciones."
+      },
+      "data": {
+        "title": "Datos, servicios y fallos",
+        "description": "Sigue solicitudes por repositorios y servicios, devolviendo fallos tipados en vez de excepciones."
+      },
+      "production": {
+        "title": "Flujo de produccion",
+        "description": "Termina con localizacion, pruebas, analisis, depuracion, seguridad y una lista repetible."
+      }
+    },
+    "topics": {
+      "project_map": "Mapa del proyecto",
+      "pubspec": "Pubspec",
+      "conventions": "Convenciones",
+      "main": "main.dart",
+      "wrappers": "Wrappers",
+      "config": "Configuracion",
+      "theme": "Tema",
+      "tokens": "Tokens de diseno",
+      "responsive": "Interfaz adaptable",
+      "layers": "Capas",
+      "boundaries": "Limites",
+      "imports": "Imports",
+      "events": "Eventos",
+      "states": "Estados",
+      "side_effects": "Efectos",
+      "go_router": "GoRouter",
+      "guards": "Guards",
+      "deep_links": "Enlaces profundos",
+      "dio": "Dio",
+      "repositories": "Repositorios",
+      "failures": "Fallos",
+      "testing": "Pruebas",
+      "localization": "Localizacion",
+      "quality": "Calidad de codigo"
+    }
+  },
+  "foundations": {
+    "app_bar": "Fundamentos del proyecto",
+    "module": "MODULO 1 DE 8",
+    "duration": "35 min",
+    "title": "Conoce el terreno antes de construir.",
+    "intro": "Este proyecto esta organizado para crecer de forma predecible. Aprende primero donde pertenece cada decision y crear funciones sera mucho mas facil.",
+    "outcome": "Al terminar, podras explicar cada area principal, elegir el lugar correcto para codigo nuevo y leer el proyecto en un orden util.",
+    "mental_model": {
+      "title": "El modelo mental de tres partes",
+      "subtitle": "Piensa en limites, no solo en carpetas.",
+      "root": "Raiz = contrato del proyecto",
+      "root_body": "La configuracion y las guias definen dependencias, calidad, preparacion, recursos y convenciones.",
+      "source": "lib/src = base de la aplicacion",
+      "source_body": "Rutas, temas, servicios, utilidades y bloques compartidos sostienen toda la aplicacion.",
+      "feature": "features = capacidades del usuario",
+      "feature_body": "Cada funcion posee sus modelos, contratos, datos, estado y pantallas sin entrar en los detalles internos de otra funcion."
+    },
+    "root_title": "Archivos raiz: el contrato",
+    "root_subtitle": "Lee estos archivos antes de editar el codigo de la aplicacion.",
+    "source_title": "Mapa fuente: donde va el codigo",
+    "source_subtitle": "Usa este mapa cuando no sepas donde debe vivir un archivo nuevo.",
+    "order_title": "Un orden de lectura util",
+    "order_subtitle": "No leas alfabeticamente. Sigue las decisiones de lo general a lo especifico.",
+    "rules_title": "Convenciones para memorizar",
+    "rules_subtitle": "Estos limites mantienen comprensible una base de codigo creciente.",
+    "files": {
+      "agents": "El acuerdo de trabajo: arquitectura, estado, navegacion, red, limites de seguridad y verificacion requerida.",
+      "design": "El contrato visual: colores semanticos, tipografia, espacios, bordes, movimiento, adaptacion y modo oscuro.",
+      "setup": "Instrucciones de entorno y plataforma. Guarda aqui la configuracion nativa y de claves API.",
+      "architecture": "Una explicacion general de la estructura feature-first y la direccion de sus dependencias.",
+      "pubspec": "El manifiesto del paquete. Declara SDK, dependencias, recursos, fuentes y metadatos.",
+      "analysis": "Configuracion de analisis basada en flutter_lints que detecta codigo riesgoso o inconsistente.",
+      "assets": "Recursos como traducciones, iconos y fuentes. Todo recurso incluido tambien se declara en pubspec.yaml.",
+      "test": "Pruebas unitarias y de widgets. Su estructura normalmente refleja el codigo fuente probado."
+    },
+    "folders": {
+      "main": "Punto de entrada. Inicializa Flutter, localizacion, entorno, servicios y wrappers raiz.",
+      "app": "Construye MaterialApp.router y aplica temas, localizacion, rutas y wrappers globales.",
+      "features": "Flujos de usuario autocontenidos. Agrega aqui el producto y separa capas cuando la complejidad lo necesite.",
+      "shared": "Widgets, helpers, hooks, enums y wrappers realmente compartidos. No debe convertirse en un cajon de todo.",
+      "routing": "Fuente unica de navegacion: constantes, GoRouter, redirecciones y acceso global al navegador.",
+      "services": "Integraciones reutilizables con dispositivo, almacenamiento, red, multimedia, permisos y plataformas.",
+      "theme": "Lenguaje visual: temas, colores, tipografia, espacios, bordes, sombras, duraciones y curvas.",
+      "config": "Configuracion de aplicacion como el cliente Dio compartido y la URL base del entorno.",
+      "imports": "Exports agrupados que acortan imports. Mantenlos intencionales para evitar dependencias ocultas.",
+      "extensions": "Comodidades pequenas sobre tipos existentes como BuildContext, String, DateTime y Widget.",
+      "utils": "Primitivas tecnicas como Failure, tareas, registro, validacion, formatters y typedefs."
+    },
+    "order": {
+      "guides": "Aprende las reglas y el lenguaje visual antes de evaluar implementaciones individuales.",
+      "dependencies": "Identifica el stack y las capacidades existentes antes de agregar paquetes.",
+      "startup": "Sigue la inicializacion y los sistemas globales antes de que aparezca la primera pantalla.",
+      "flow": "Observa como una URL llega a una pantalla y sigue una funcion completa hasta sus datos.",
+      "support": "Termina con componentes e infraestructura despues de saber que codigo de producto los consume."
+    },
+    "rules": {
+      "feature": "Una funcion es autocontenida; nunca importa archivos internos de otra funcion.",
+      "shared": "Mueve codigo a shared solo cuando varias funciones no relacionadas lo necesitan.",
+      "naming": "Usa archivos snake_case.dart, tipos PascalCase y miembros privados _camelCase.",
+      "barrel": "Prefiere el barrel comun, pero usa imports explicitos cuando aclaren la propiedad.",
+      "packages": "Reutiliza el stack; no agregues otro router, gestor de estado o paquete duplicado.",
+      "generated": "Rutas, inicio, configuracion, temas, imports y pubspec son archivos de alto impacto; editalos con cuidado."
+    },
+    "practice": {
+      "title": "Punto de control",
+      "subtitle": "Entiendes este modulo cuando completas esto sin adivinar.",
+      "task_1": "Encuentra la ruta inicial y explica que pantalla construye.",
+      "task_2": "Indica la carpeta correcta para un widget de funcion y otro global.",
+      "task_3": "Encuentra donde registrar una fuente, traduccion y dependencia nuevas.",
+      "task_4": "Explica por que las llamadas de red no pertenecen al metodo build de un widget.",
+      "button": "Volver a la ruta"
+    }
+  },
+  "lesson": {
+    "overview_title": "Conceptos clave",
+    "overview_subtitle": "Empieza con el modelo mental para que los archivos tengan sentido.",
+    "resources_title": "Archivos para estudiar",
+    "resources_subtitle": "Lee estos archivos reales del proyecto para conectar las ideas con el codigo.",
+    "flow_title": "Como trabajan juntos",
+    "flow_subtitle": "Sigue la secuencia desde la intencion del usuario hasta el comportamiento del framework.",
+    "rules_title": "Buenas practicas",
+    "rules_subtitle": "Estos habitos hacen que la estructura crezca y siga siendo facil de aprender.",
+    "back_button": "Volver a la ruta"
+  },
+  "startup": {
+    "app_bar": "Inicio de la app y wrappers",
+    "module": "MODULO 2 DE 8",
+    "duration": "30 min",
+    "title": "Entiende como despierta la app.",
+    "intro": "El codigo de inicio decide que debe estar listo antes de que aparezca la primera pantalla. Aqui se conectan localizacion, entorno, configuracion, providers, rutas y sesion.",
+    "outcome": "Al terminar, podras seguir el lanzamiento desde main() hasta la primera pagina y explicar para que sirve cada wrapper.",
+    "concepts": {
+      "entry": {
+        "title": "main.dart es la entrada",
+        "body": "Usa main.dart para trabajo unico previo al render, como binding, splash nativo, localizacion, dotenv y configuracion compartida."
+      },
+      "shell": {
+        "title": "app.dart construye el shell raiz",
+        "body": "App crea MaterialApp.router y conecta tema global, router, delegados de localizacion y wrappers de alto nivel."
+      },
+      "wrappers": {
+        "title": "Los wrappers separan preocupaciones globales",
+        "body": "LocalizationWrapper, StateWrapper, ScreenUtilWrapper, SkeletonWrapper y SessionListenerWrapper manejan responsabilidades amplias sin cargar las pantallas."
+      }
+    },
+    "resources": {
+      "main": "Lee el orden exacto de inicializacion y observa que ocurre antes de runApp.",
+      "app": "Aqui se crea MaterialApp.router y se aplican wrappers globales alrededor de todas las rutas.",
+      "localization": "Define idiomas soportados, ruta de traducciones y locale de respaldo.",
+      "state": "Aqui se proveen los blocs de larga vida para todo el arbol.",
+      "session": "Este wrapper reacciona al estado de sesion, quita el splash y cambia la ruta global.",
+      "config": "Aqui nacen Dio compartido y la URL base tomada del entorno."
+    },
+    "steps": {
+      "binding": "Inicializa el motor de Flutter y preserva el splash nativo antes del trabajo asincrono.",
+      "services": "Carga localizacion, luego entorno y despues servicios compartidos para que el arbol lea estado listo.",
+      "run_app": "Envuelve la app una sola vez en localizacion y providers globales en vez de repetir sistemas dentro de pantallas.",
+      "material": "Construye MaterialApp.router despues de crear dependencias globales para que tema, rutas y localizacion esten disponibles.",
+      "session": "Resuelve la sesion temprano para quitar el splash y llevar al usuario a la pantalla correcta."
+    },
+    "rules": {
+      "fast": "Manten el inicio rapido e intencional; solo deja aqui inicializacion realmente global.",
+      "order": "Respeta el orden de inicializacion al editar inicio porque localizacion, config y splash dependen de el.",
+      "long_lived": "Provee en la raiz solo estado global y duradero; los blocs de una funcion suelen vivir mas cerca de su pantalla.",
+      "blocking": "No bloquees el primer frame con trabajo evitable. Si puede pasar despues, muevelo fuera del inicio.",
+      "splash": "Quita el splash cuando la app ya sabe a donde enviar al usuario, no con un delay ciego."
+    },
+    "practice": {
+      "title": "Punto de control de inicio",
+      "subtitle": "Entiendes este modulo cuando puedes explicar el lanzamiento sin abrir archivos al azar.",
+      "task_1": "Enumera el orden exacto de inicializacion en main.dart.",
+      "task_2": "Explica por que ScreenUtilWrapper rodea MaterialApp y no una sola pantalla.",
+      "task_3": "Encuentra donde se quita el splash y que cambio de estado lo dispara.",
+      "task_4": "Describe que trabajo pertenece a main.dart y que trabajo debe quedarse dentro de una funcion."
+    }
+  },
+  "design": {
+    "app_bar": "Sistema de diseno e interfaz adaptable",
+    "module": "MODULO 3 DE 8",
+    "duration": "35 min",
+    "title": "Construye interfaz con tokens, no con suposiciones.",
+    "intro": "El proyecto ya trae un sistema visual. La forma mas rapida de crear buenas pantallas es reutilizar colores, espacios, tipografia, bordes, sombras y widgets compartidos.",
+    "outcome": "Al terminar, podras encontrar el token correcto, usar helpers de contexto y construir pantallas coherentes en modo claro, oscuro y distintos tamanos.",
+    "concepts": {
+      "semantic": {
+        "title": "Los colores semanticos describen proposito",
+        "body": "Usa roles de ColorScheme y AppColorsExtension como success o warning en lugar de repetir hex aleatorios."
+      },
+      "tokens": {
+        "title": "Los tokens repiten espacio y forma",
+        "body": "AppSpacing, AppBorders, AppDurations, AppCurves y el text theme ponen nombre a decisiones repetidas y facilitan revisiones."
+      },
+      "responsive": {
+        "title": "ScreenUtil adapta la interfaz",
+        "body": "El proyecto usa ScreenUtil para escalar texto y medidas con mas seguridad entre telefonos. Usa .sp y .r donde el codigo ya sigue ese patron."
+      }
+    },
+    "resources": {
+      "theme": "Empieza aqui para ver como se arma ThemeData y donde se conectan extensiones personalizadas.",
+      "colors": "Lee las paletas clara y oscura para entender roles semanticos de color.",
+      "spacing": "Este archivo explica la escala de espacios y cuando usar cada valor.",
+      "borders": "Usa radios compartidos en vez de esquinas distintas por widget.",
+      "context": "Las extensiones de contexto exponen colores, tipografia, colores semanticos y tokens con accesos cortos.",
+      "widgets": "Widgets compartidos como AppCard muestran como consumir tokens una vez y reutilizar el contrato visual."
+    },
+    "steps": {
+      "foundation": "Define primero la base del tema: colores, tipografia, temas de componentes y extensiones.",
+      "access": "Expone esos valores por medio de extensiones de contexto para que el codigo de features sea limpio.",
+      "responsive": "Escala texto y radios con ScreenUtil cuando corresponda, sobre todo en UI compacta.",
+      "components": "Mueve patrones visuales repetidos a widgets compartidos en lugar de duplicar estilos en varias features.",
+      "pages": "Arma paginas con tokens y widgets compartidos y luego revisalas en claro, oscuro y pantallas pequenas."
+    },
+    "rules": {
+      "semantic": "Prefiere roles semanticos del tema sobre colores hard-codeados.",
+      "tokens": "Usa AppSpacing y AppBorders antes de introducir numeros nuevos.",
+      "shared": "Promueve patrones repetidos a widgets compartidos en vez de duplicar estilo.",
+      "test_modes": "Revisa siempre apariencia en modo claro y oscuro y al menos un ancho pequeno.",
+      "magic_numbers": "Evita numeros magicos en layout cuando un token ya comunica la misma intencion."
+    },
+    "practice": {
+      "title": "Punto de control de diseno",
+      "subtitle": "Entiendes este modulo cuando puedes estilizar una pantalla nueva sin romper consistencia.",
+      "task_1": "Encuentra el archivo de espacios y explica cuando usar `md` frente a `lg`.",
+      "task_2": "Indica la extension de tema que guarda colores semanticos como success y warning.",
+      "task_3": "Explica por que `context.colors.primary` es mas seguro que repetir un hex en un widget.",
+      "task_4": "Describe cuando usar AppCard u otro widget compartido en vez de estilizar un Container desde cero."
+    }
+  },
+  "architecture_lesson": {
+    "app_bar": "Arquitectura feature-first",
+    "module": "MODULO 4 DE 8",
+    "duration": "35 min",
+    "title": "Organiza por capacidad, no solo por tipo de archivo.",
+    "intro": "La estructura feature-first mantiene un flujo de usuario en un mismo lugar. Eso reduce costo mental porque puedes abrir una feature y ver pantalla, estado, contratos y datos juntos.",
+    "outcome": "Al terminar, podras explicar donde vive el codigo nuevo, como deben fluir las dependencias y cuando usar shared en lugar de entrar en otra feature.",
+    "concepts": {
+      "feature": {
+        "title": "Una feature posee una capacidad del producto",
+        "body": "Por ejemplo, auth contiene su dominio, datos, estado y pantallas. Eso mantiene cambios locales y mas faciles de revisar."
+      },
+      "layers": {
+        "title": "Las capas separan responsabilidades",
+        "body": "Presentacion maneja UI e intencion, dominio define contratos y entidades, y datos implementa esos contratos."
+      },
+      "shared": {
+        "title": "Shared es infraestructura transversal",
+        "body": "Lleva codigo a shared solo cuando varias features no relacionadas lo necesitan de verdad."
+      }
+    },
+    "resources": {
+      "auth_feature": "Usa auth como ejemplo principal porque contiene data, domain, presentation y varias pantallas.",
+      "roadmap_feature": "Usa learning_roadmap como ejemplo simple centrado en contenido y presentacion.",
+      "data": "Aqui se ve como la implementacion de repositorio vive dentro de la feature y depende de servicios compartidos.",
+      "domain": "Esta carpeta define el contrato que usa la presentacion sin conocer el origen de datos.",
+      "presentation": "Pantallas y blocs leen contratos de dominio y renderizan comportamiento del producto.",
+      "shared": "Las carpetas compartidas apoyan varias features pero no deben conocer detalles privados de una sola."
+    },
+    "steps": {
+      "route": "Una ruta entra en una feature a traves de una pantalla publica.",
+      "presentation": "La pantalla o el bloc recibe la intencion del usuario y decide que trabajo necesita el dominio.",
+      "domain": "El dominio describe lo que la feature necesita mediante entidades y contratos de repositorio.",
+      "data": "La capa de datos implementa esos contratos y transforma respuestas de servicios.",
+      "services": "Los servicios compartidos hablan con sistemas externos como APIs, almacenamiento o capacidades del dispositivo."
+    },
+    "rules": {
+      "boundaries": "No importes archivos internos de otra feature. Compartir entre features debe pasar por shared o un contrato publico.",
+      "shared": "Mueve codigo a shared solo cuando ya demostro reutilizacion real.",
+      "simple": "Empieza con la estructura mas simple que funcione y agrega carpetas cuando la complejidad lo pida.",
+      "dependencies": "Haz que dependencias fluyan desde presentacion hacia contratos de dominio y luego hacia datos y servicios.",
+      "widgets": "Los widgets deben disparar comportamiento, no hacer networking directo."
+    },
+    "practice": {
+      "title": "Punto de control de arquitectura",
+      "subtitle": "Entiendes este modulo cuando puedes ubicar archivos nuevos con confianza.",
+      "task_1": "Elige la carpeta correcta para una entidad, contrato de repositorio, implementacion, bloc y pantalla.",
+      "task_2": "Explica por que una feature no debe importar la implementacion privada de repositorio de otra.",
+      "task_3": "Describe cuando un helper pertenece a shared y cuando debe quedarse dentro de una feature.",
+      "task_4": "Sigue un flujo de auth desde presentacion hasta servicios."
+    }
+  },
+  "bloc_lesson": {
+    "app_bar": "Gestion de estado con BLoC",
+    "module": "MODULO 5 DE 8",
+    "duration": "35 min",
+    "title": "Convierte intencion del usuario en estado predecible.",
+    "intro": "BLoC ayuda a separar lo que ocurrio de lo que la UI debe mostrar. Esa claridad importa cuando las features tienen carga, errores, autenticacion y efectos secundarios.",
+    "outcome": "Al terminar, podras leer un flujo de eventos, entender estados inmutables y decidir si la logica pertenece al widget, bloc, listener o repositorio.",
+    "concepts": {
+      "events": {
+        "title": "Los eventos representan intencion o cambio externo",
+        "body": "Un tap, una verificacion de sesion o una actualizacion de stream se convierten en eventos."
+      },
+      "state": {
+        "title": "El estado representa lo que debe saber la UI",
+        "body": "Los estados son snapshots inmutables como loading, authenticated o unauthenticated."
+      },
+      "effects": {
+        "title": "Los efectos secundarios deben ser deliberados",
+        "body": "Navegacion, snack bars y toasts son efectos. A largo plazo es mas limpio manejarlos en listeners."
+      }
+    },
+    "resources": {
+      "auth_bloc": "Estudia el flujo de loading para login, signup y forgot-password.",
+      "session_bloc": "Estudia el ciclo de sesion, la suscripcion al stream y las transiciones que afectan el splash.",
+      "login_screen": "Mira como la UI lee estado del bloc y despacha eventos segun input validado.",
+      "state_wrapper": "Este archivo muestra donde se proveen blocs a nivel app.",
+      "agents": "AGENTS.md documenta la intencion del proyecto para handlers delgados y separacion de efectos."
+    },
+    "steps": {
+      "intent": "El usuario realiza una accion y la UI despacha un evento que describe esa intencion.",
+      "loading": "El bloc emite loading temprano para que la UI desactive botones o muestre progreso.",
+      "repository": "El bloc delega el trabajo real a repositorios o servicios en lugar de conocer backend.",
+      "output": "El resultado se pliega en exito o fallo y luego produce el siguiente estado.",
+      "effects": "La navegacion o el feedback deben manejarse en un lugar predecible para conservar testabilidad."
+    },
+    "rules": {
+      "immutable": "Mantén eventos y estados inmutables para que los cambios sean explicitos.",
+      "thin": "Los handlers del bloc deben orquestar, no convertirse en funciones gigantes de negocio.",
+      "listener": "Prefiere BlocListener para efectos y BlocBuilder para rebuilds; usa BlocConsumer solo cuando de verdad necesitas ambos.",
+      "context": "Pasar BuildContext dentro de eventos funciona hoy en esta plantilla, pero es una senal de deuda que conviene reducir.",
+      "streams": "Cancela suscripciones en close() para evitar fugas."
+    },
+    "practice": {
+      "title": "Punto de control de BLoC",
+      "subtitle": "Entiendes este modulo cuando puedes explicar por que una logica vive en una capa y no en otra.",
+      "task_1": "Describe el flujo de login desde el boton hasta el cambio de estado.",
+      "task_2": "Explica la diferencia entre SessionBloc y AuthBloc en este proyecto.",
+      "task_3": "Senala un efecto secundario del flujo actual de auth y donde lo moverias idealmente con el tiempo.",
+      "task_4": "Explica por que los estados inmutables son mas faciles de depurar."
+    }
+  },
+  "routing_lesson": {
+    "app_bar": "Rutas y navegacion",
+    "module": "MODULO 6 DE 8",
+    "duration": "30 min",
+    "title": "Mantén la navegacion centralizada y facil de ensenar.",
+    "intro": "Las rutas se vuelven dificiles cuando estan dispersas. Este proyecto las mantiene en un solo lugar para que agregar paginas y redirecciones no dependa de buscar strings por todas partes.",
+    "outcome": "Al terminar, podras agregar una ruta correctamente, elegir entre push y go y entender donde viven las decisiones globales de navegacion.",
+    "concepts": {
+      "constants": {
+        "title": "Las constantes de ruta evitan desorden",
+        "body": "AppRoutes reúne paths para que widgets y wrappers no repitan strings hard-codeados."
+      },
+      "router": {
+        "title": "GoRouter es la fuente de verdad",
+        "body": "app_router.dart mapea paths a pantallas y define initialLocation. Tenerlo central facilita onboarding y debugging."
+      },
+      "navigation": {
+        "title": "El stack es una decision de producto",
+        "body": "Usa push para flujos de detalle y regreso, y go para reemplazar el flujo actual como auth o redirecciones globales."
+      }
+    },
+    "resources": {
+      "routes": "Lee primero todas las constantes de ruta para saber que URLs soporta oficialmente la app.",
+      "router": "Estudia el registro de rutas, initialLocation y como se conectan las lecciones.",
+      "global": "Usa la root navigator key solo cuando una navegacion u overlay debe ocurrir fuera de un contexto local.",
+      "session": "Este wrapper muestra navegacion global atada al cambio de sesion.",
+      "roadmap": "Esta pagina muestra navegacion comun de usuario con context.push desde una lista."
+    },
+    "steps": {
+      "constants": "Define la constante de ruta antes de escribir navegacion en widgets.",
+      "register": "Registra la ruta en app_router.dart con el builder hacia la pantalla publica de la feature.",
+      "navigate": "Elige push o go segun si la pantalla anterior debe seguir en el stack.",
+      "global": "Maneja decisiones globales como redirecciones de sesion en flujo compartido, no en builds aleatorios.",
+      "maintain": "Mantén nombres y paths estables para que futuras pruebas y deep links sigan alineados."
+    },
+    "rules": {
+      "central": "No disperses tablas de rutas cuando el estandar del proyecto es un router centralizado.",
+      "push_go": "Usa push para detalles o lecciones; usa go para reemplazar flujos completados como login.",
+      "guards": "Pon redirects y guards en la configuracion del router o wrappers globales, no dentro de builds individuales.",
+      "stable": "No cambies strings de ruta sin necesidad porque pruebas y enlaces futuros dependen de estabilidad.",
+      "deeplink": "Disena los paths como si alguien pudiera abrirlos directo mas adelante."
+    },
+    "practice": {
+      "title": "Punto de control de rutas",
+      "subtitle": "Entiendes este modulo cuando puedes agregar o depurar una ruta sin prueba y error.",
+      "task_1": "Crea una regla mental para cuando usar `context.push()` y cuando usar `context.go()`.",
+      "task_2": "Encuentra `initialLocation` y explica por que esa pantalla abre primero.",
+      "task_3": "Explica por que `appRouter.go(...)` se usa en el wrapper de sesion en lugar de depender solo de un BuildContext local.",
+      "task_4": "Describe los tres archivos que editarias para agregar un nuevo modulo de aprendizaje."
+    }
+  },
+  "services_lesson": {
+    "app_bar": "Servicios y fallos",
+    "module": "MODULO 7 DE 8",
+    "duration": "40 min",
+    "title": "Mueve el trabajo riesgoso detras de abstracciones seguras.",
+    "intro": "Red, almacenamiento, permisos y APIs del dispositivo pueden fallar de muchas formas. El proyecto envuelve esa incertidumbre con servicios compartidos, fallos tipados y mapeo en repositorios.",
+    "outcome": "Al terminar, podras seguir el camino de los datos desde un servicio hasta un bloc y explicar por que `FutureEither` y `Failure` limpian el manejo de errores.",
+    "concepts": {
+      "services": {
+        "title": "Los servicios hablan con el mundo exterior",
+        "body": "Los servicios poseen detalles compartidos de integraciones como Dio, storage, permisos o archivos."
+      },
+      "repositories": {
+        "title": "Los repositorios traducen transporte a lenguaje de dominio",
+        "body": "Los repositorios llaman servicios y convierten respuestas crudas en entidades y contratos de la feature."
+      },
+      "failures": {
+        "title": "Los fallos hacen explicitos los errores",
+        "body": "En vez de lanzar excepciones crudas hasta la UI, la plantilla usa `Either<Failure, T>` para tratar exito y fallo como resultados claros."
+      }
+    },
+    "resources": {
+      "auth_service": "Estudia como las solicitudes de auth y el stream de auth-state estan centralizados.",
+      "config": "Aqui se crea la instancia compartida de Dio para que las features no creen clientes por su cuenta.",
+      "task_runner": "Este helper revisa conectividad cuando hace falta, captura excepciones y las convierte en fallos.",
+      "failure": "Estas clases pequenas definen el vocabulario de errores del proyecto.",
+      "repository": "Lee como auth repository convierte respuestas en AppUser y devuelve fallos tipados.",
+      "dio_service": "Este wrapper generico muestra el patron para usar el Dio compartido mas alla de auth."
+    },
+    "steps": {
+      "use_case": "Empieza por la necesidad de la feature, no por la llamada API.",
+      "service": "Usa un servicio compartido para hablar con Dio, storage, media o permisos en vez de crearlos dentro de widgets.",
+      "guard": "Envuelve trabajo asincrono con runTask para que conectividad y excepciones se vuelvan resultados predecibles.",
+      "map": "Convierte respuestas de transporte en entidades de dominio o resultados mas utiles para presentacion.",
+      "returning": "Devuelve exito o fallo tipado de forma explicita para que los blocs hagan fold del resultado."
+    },
+    "rules": {
+      "shared_dio": "Usa AppConfig.dio o servicios existentes; no crees un cliente Dio nuevo dentro de una pantalla o bloc.",
+      "no_context": "No pases BuildContext a servicios. Las integraciones compartidas no deben depender del ciclo de widgets.",
+      "no_raw_errors": "Convierte errores de transporte en objetos Failure en vez de filtrar DioException a la UI.",
+      "empty_catch": "Nunca uses catch vacios. Registra, mapea o relanza con intencion.",
+      "entities": "Los repositorios deben devolver formas de dominio estables, no mapas crudos, cuando la feature depende de significado claro."
+    },
+    "practice": {
+      "title": "Punto de control de servicios",
+      "subtitle": "Entiendes este modulo cuando puedes seguir una solicitud y explicar donde cambia de responsabilidad.",
+      "task_1": "Sigue el flujo actual de verificacion de auth desde SessionBloc hasta repository, service y Dio.",
+      "task_2": "Explica por que `runTask()` vive en utils y no dentro de una sola feature.",
+      "task_3": "Indica donde puede producirse un `NetworkFailure` antes de que corra la peticion HTTP.",
+      "task_4": "Describe por que es util mapear `Map<String, dynamic>` a `AppUser` en el repositorio."
+    }
+  },
+  "production": {
+    "app_bar": "Flujo de produccion",
+    "module": "MODULO 8 DE 8",
+    "duration": "30 min",
+    "title": "Entrega cambios con una lista repetible.",
+    "intro": "Una buena estructura solo ayuda si el equipo verifica cambios de manera consistente. El proyecto ya define una rutina con formato, analisis, pruebas, localizacion, registro de assets y seguridad.",
+    "outcome": "Al terminar, podras cerrar un cambio siguiendo los mismos pasos cada vez en lugar de depender de memoria o suerte.",
+    "concepts": {
+      "loop": {
+        "title": "El flujo de produccion reduce regresiones evitables",
+        "body": "Formato, analisis, pruebas y verificacion manual capturan errores cuando el cambio aun esta fresco."
+      },
+      "localization": {
+        "title": "Texto y assets tambien son parte de la feature",
+        "body": "Si agregas copy, fuentes, iconos o imagenes, debes registrarlos bien en traducciones y pubspec."
+      },
+      "safety": {
+        "title": "La documentacion protege al siguiente companero",
+        "body": "SETUP.md, DESIGN.md y AGENTS.md reducen confusion repetida. Mantenerlos correctos tambien es calidad."
+      }
+    },
+    "resources": {
+      "pubspec": "Usa este archivo para confirmar dependencias, fuentes y assets antes de culpar al runtime.",
+      "translations": "Estos archivos guardan texto visible al usuario. Mantenlos sincronizados cuando agregas labels o mensajes.",
+      "tests": "Las pruebas de widgets verifican rapido rutas y comportamiento central sin tocar manualmente cada flujo.",
+      "analysis": "El analisis estatico detecta codigo inconsistente o riesgoso antes de abrir toda la app.",
+      "guides": "Estas guias raiz guardan expectativas de setup, arquitectura, diseno y flujo de trabajo."
+    },
+    "steps": {
+      "change": "Implementa primero el cambio de producto en la feature o capa correcta.",
+      "register": "Actualiza archivos de apoyo como rutas, assets, fuentes, traducciones o setup sensible al entorno cuando haga falta.",
+      "quality": "Ejecuta formato, analisis y pruebas automatizadas antes de QA manual.",
+      "verify": "Prueba el flujo importante en dispositivo o emulador, sobre todo navegacion, carga asincrona y errores.",
+      "handoff": "Documenta caveats, cambios de setup y riesgos pendientes para no obligar a otros a redescubrirlos."
+    },
+    "rules": {
+      "analyze": "Ejecuta `flutter analyze` antes de considerar terminada una feature.",
+      "localization": "Si cambias texto visible, actualiza traducciones y cualquier paso de generacion requerido.",
+      "secrets": "No subas secretos reales. Guarda valores sensibles y setup en los lugares aprobados del proyecto.",
+      "tests": "Agrega o actualiza pruebas para flujos cambiados, sobre todo inicio, rutas y pantallas guiadas por estado.",
+      "notes": "Comunica limitaciones conocidas y problemas sensibles al entorno con claridad, no los ocultes."
+    },
+    "practice": {
+      "title": "Punto de control de produccion",
+      "subtitle": "Entiendes este modulo cuando puedes cerrar una tarea con confianza y explicar que verificaste.",
+      "task_1": "Nombra los comandos estandar de verificacion esperados tras cambios en la app.",
+      "task_2": "Explica que debe actualizarse cuando agregas una nueva etiqueta traducida o un asset incluido.",
+      "task_3": "Describe por que las pruebas y el analizador pertenecen al ciclo normal y no solo al final.",
+      "task_4": "Explica donde documentarias un cambio sensible al setup o una limitacion conocida."
+    }
+  },
+  "auth": {
+    "log_in": "Log in",
+    "log_in_subtitle": "Enter your email and password",
+    "email": "Email",
+    "email_required": "Email is required",
+    "email_invalid": "Enter a valid email",
+    "password": "Password",
+    "password_required": "Password is required",
+    "password_too_short": "Password must be at least 6 characters",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot Password",
+    "login_button": "Login",
+    "dont_have_account": "Don't have an account? ",
+    "sign_up": "Sign Up",
+    "create_account": "Create Account",
+    "create_account_subtitle": "Create a new account to get started.",
+    "name": "Name",
+    "name_required": "Name is required",
+    "confirm_password": "Confirm Password",
+    "confirm_password_required": "Confirm password is required",
+    "passwords_do_not_match": "Passwords do not match",
+    "create_account_button": "Create Account",
+    "already_have_account": "Already have an account? ",
+    "sign_in": "Sign In",
+    "or_continue_with": "Or Continue With Account",
+    "forgot_password_title": "Forgot Password",
+    "forgot_password_subtitle": "Enter your email address to receive a reset link\nand regain access to your account.",
+    "reset_link_sent": "Password reset link sent to your email."
+  }
+}

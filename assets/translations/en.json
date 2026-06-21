@@ -1,0 +1,561 @@
+{
+  "shared": {
+    "get_started": "Get Started"
+  },
+  "onboarding": {
+    "onboarding_title_1": "Your Journey,\nPerfectly Planned",
+    "onboarding_subtitle_1": "Effortlessly create and organize your\ndream trips. Start exploring now!",
+    "onboarding_title_2": "Discover\nFriends Nearby",
+    "onboarding_subtitle_2": "See where your friends are traveling and\nexplore the world together.",
+    "onboarding_title_3": "Stay Updated\nwith Top Places",
+    "onboarding_subtitle_3": "Find trending destinations and must-see attractions,\nall tailored to enhance your travel plans."
+  },
+  "home": {
+    "home_title": "Home",
+    "welcome_home": "Welcome Home!",
+    "home_subtitle": "You have successfully completed the onboarding process."
+  },
+  "roadmap": {
+    "eyebrow": "BLOC TEMPLATE ACADEMY",
+    "title": "Learn the project, one layer at a time.",
+    "subtitle": "A practical path from opening the repository to building, testing, and shipping features with confidence.",
+    "modules": "learning modules",
+    "level": "starting level",
+    "beginner": "Beginner",
+    "lesson_coming_soon": "Lesson details are planned for the next step.",
+    "items": {
+      "foundations": {
+        "title": "Project foundations",
+        "description": "Read the repository map, package setup, project guides, and naming rules before changing code."
+      },
+      "startup": {
+        "title": "App startup and wrappers",
+        "description": "Follow execution from main() through configuration, localization, providers, and MaterialApp."
+      },
+      "design": {
+        "title": "Design system and responsive UI",
+        "description": "Build consistent light and dark interfaces with theme roles, tokens, shared widgets, and ScreenUtil."
+      },
+      "architecture": {
+        "title": "Feature-first architecture",
+        "description": "Understand feature boundaries and how presentation, domain, and data layers work together."
+      },
+      "bloc": {
+        "title": "BLoC state management",
+        "description": "Model events and immutable states, keep handlers thin, and separate UI rebuilding from side effects."
+      },
+      "routing": {
+        "title": "Routing and navigation",
+        "description": "Learn centralized GoRouter routes, stack behavior, redirects, guards, and future lesson navigation."
+      },
+      "data": {
+        "title": "Data, services, and failures",
+        "description": "Trace requests through repositories and shared services while returning typed failures instead of exceptions."
+      },
+      "production": {
+        "title": "Production workflow",
+        "description": "Finish with localization, testing, analysis, debugging, security, and a repeatable feature checklist."
+      }
+    },
+    "topics": {
+      "project_map": "Project map",
+      "pubspec": "Pubspec",
+      "conventions": "Conventions",
+      "main": "main.dart",
+      "wrappers": "App wrappers",
+      "config": "Configuration",
+      "theme": "Theme",
+      "tokens": "Design tokens",
+      "responsive": "Responsive UI",
+      "layers": "Layers",
+      "boundaries": "Boundaries",
+      "imports": "Imports",
+      "events": "Events",
+      "states": "States",
+      "side_effects": "Side effects",
+      "go_router": "GoRouter",
+      "guards": "Guards",
+      "deep_links": "Deep links",
+      "dio": "Dio",
+      "repositories": "Repositories",
+      "failures": "Failures",
+      "testing": "Testing",
+      "localization": "Localization",
+      "quality": "Code quality"
+    }
+  },
+  "foundations": {
+    "app_bar": "Project foundations",
+    "module": "MODULE 1 OF 8",
+    "duration": "35 min",
+    "title": "Know the ground before you build.",
+    "intro": "This project is organized to make growth predictable. First learn where decisions belong; then writing features becomes much easier.",
+    "outcome": "By the end, you can explain every top-level area, find the right home for new code, and read the project in a useful order.",
+    "mental_model": {
+      "title": "The three-part mental model",
+      "subtitle": "Think in boundaries, not just folders.",
+      "root": "Root = project contract",
+      "root_body": "Configuration and guide files define dependencies, quality rules, setup, assets, and team conventions.",
+      "source": "lib/src = application foundation",
+      "source_body": "Routing, themes, services, utilities, and shared building blocks support the whole application.",
+      "feature": "features = user capabilities",
+      "feature_body": "Each feature owns its models, business contracts, data implementation, state, and screens without reaching into another feature's internals."
+    },
+    "root_title": "Root files: the project contract",
+    "root_subtitle": "Read these before editing application code.",
+    "source_title": "Source map: where code belongs",
+    "source_subtitle": "Use this map whenever you are unsure where a new file should live.",
+    "order_title": "A useful reading order",
+    "order_subtitle": "Do not read alphabetically. Follow decisions from broad to specific.",
+    "rules_title": "Conventions worth memorizing",
+    "rules_subtitle": "These boundaries keep a growing codebase understandable.",
+    "files": {
+      "agents": "The working agreement: architecture, state, navigation, networking, safety boundaries, and required verification.",
+      "design": "The UI contract: semantic colors, typography, spacing, borders, motion, responsiveness, and dark-mode rules.",
+      "setup": "Environment and platform setup instructions. Keep API-key and native configuration guidance here instead of duplicating it.",
+      "architecture": "A high-level explanation of the selected feature-first structure and its dependency direction.",
+      "pubspec": "The package manifest. It declares the Dart SDK, dependencies, assets, fonts, and package metadata.",
+      "analysis": "Static-analysis configuration built on flutter_lints. It catches risky or inconsistent code before runtime.",
+      "assets": "Runtime resources such as translations, icons, and fonts. Every bundled asset must also be declared in pubspec.yaml.",
+      "test": "Automated unit and widget checks. Its folder structure should generally mirror the source code being tested."
+    },
+    "folders": {
+      "main": "The process entry point. It initializes Flutter, localization, environment values, app services, and root wrappers.",
+      "app": "Builds MaterialApp.router and applies themes, localization delegates, routing, and app-wide wrappers.",
+      "features": "Self-contained user flows. Add product behavior here first; split into presentation, domain, and data only as complexity needs.",
+      "shared": "Truly cross-feature widgets, helpers, hooks, enums, and wrappers. It must not become a dumping ground.",
+      "routing": "The single navigation source of truth: route constants, GoRouter configuration, redirects, and global navigator access.",
+      "services": "Reusable integrations with device APIs, storage, networking, media, permissions, and external platforms.",
+      "theme": "The visual language: Material themes, semantic colors, typography, spacing, borders, shadows, durations, and curves.",
+      "config": "Application-level configuration such as the shared Dio client and environment-derived base URL.",
+      "imports": "Barrel exports that shorten common imports. Keep them intentional to avoid hidden dependencies and name collisions.",
+      "extensions": "Small, focused conveniences added to existing types such as BuildContext, String, DateTime, and Widget.",
+      "utils": "Framework-light technical primitives including Failure, task execution, logging, validation, formatters, and typedefs."
+    },
+    "order": {
+      "guides": "Learn the team's rules and visual language before judging individual implementation choices.",
+      "dependencies": "Identify the selected stack and understand which capabilities already exist before adding packages.",
+      "startup": "Trace app initialization and see which wrappers and global systems exist before the first screen appears.",
+      "flow": "See how URLs reach screens, then inspect one complete feature from UI down toward its data source.",
+      "support": "Finish with reusable components and infrastructure after you know which product code consumes them."
+    },
+    "rules": {
+      "feature": "A feature is self-contained; never import another feature's internal files.",
+      "shared": "Move code to shared only when multiple unrelated features genuinely need it.",
+      "naming": "Use snake_case.dart files, PascalCase types, and _camelCase private members.",
+      "barrel": "Prefer the project barrel for common APIs, but use explicit imports when they make ownership clearer.",
+      "packages": "Reuse the existing stack; do not add a second router, state manager, or duplicate service package.",
+      "generated": "Treat routing, main initialization, config, themes, imports, and pubspec as high-impact files and edit carefully."
+    },
+    "practice": {
+      "title": "Foundation checkpoint",
+      "subtitle": "You understand this module when you can complete these without guessing.",
+      "task_1": "Find the initial route and explain which screen it builds.",
+      "task_2": "Name the correct folder for a feature-only widget and for an app-wide widget.",
+      "task_3": "Find where a new font, translation file, and package dependency would be registered.",
+      "task_4": "Explain why network calls do not belong inside a widget build method.",
+      "button": "Back to roadmap"
+    }
+  },
+  "lesson": {
+    "overview_title": "Core concepts",
+    "overview_subtitle": "Start with the mental model so the files make sense.",
+    "resources_title": "Files to study",
+    "resources_subtitle": "Read these files in the current project to connect the ideas to real code.",
+    "flow_title": "How the pieces work together",
+    "flow_subtitle": "Follow the sequence from user intent to framework behavior.",
+    "rules_title": "Best practices to keep",
+    "rules_subtitle": "These habits make the structure easier to scale and easier to teach.",
+    "back_button": "Back to roadmap"
+  },
+  "startup": {
+    "app_bar": "App startup and wrappers",
+    "module": "MODULE 2 OF 8",
+    "duration": "30 min",
+    "title": "Understand how the app wakes up.",
+    "intro": "Startup code decides what is ready before the first screen appears. In this project, the startup path wires localization, environment values, app config, providers, routing, and session behavior.",
+    "outcome": "By the end, you can trace launch from main() to the first page and explain why each wrapper exists and what problem it solves.",
+    "concepts": {
+      "entry": {
+        "title": "main.dart is the execution entry",
+        "body": "Use main.dart for one-time setup that must happen before widgets render, such as Flutter binding, native splash control, localization initialization, dotenv loading, and shared app config."
+      },
+      "shell": {
+        "title": "app.dart builds the root application shell",
+        "body": "App builds MaterialApp.router and connects global theme, router, localization delegates, and root-level wrappers. This keeps the launch process readable and centralized."
+      },
+      "wrappers": {
+        "title": "Wrappers compose cross-cutting behavior",
+        "body": "LocalizationWrapper, StateWrapper, ScreenUtilWrapper, SkeletonWrapper, and SessionListenerWrapper each handle one broad concern. That separation keeps screens focused on product UI instead of app boot logic."
+      }
+    },
+    "resources": {
+      "main": "Read the exact initialization order and note which work happens before runApp.",
+      "app": "See where MaterialApp.router is created and how the builder applies app-wide wrappers around every route.",
+      "localization": "This wrapper defines supported locales, translation path, and English fallback behavior.",
+      "state": "This is where long-lived blocs are provided to the whole app tree.",
+      "session": "This wrapper reacts to session state, removes splash, and performs global route changes when auth is known.",
+      "config": "The shared Dio client and environment-derived base URL are created here."
+    },
+    "steps": {
+      "binding": "Initialize the Flutter engine and preserve native splash before any async startup work begins.",
+      "services": "Load localization first, then environment values, then create shared app services so later widgets read ready-to-use global state.",
+      "run_app": "Wrap the app in localization and state providers only once at the root instead of rebuilding those systems inside screens.",
+      "material": "Build MaterialApp.router after global dependencies exist so theme, routes, and localization delegates are available everywhere.",
+      "session": "Resolve the session as early as possible so splash can be removed and the user lands on the correct first screen."
+    },
+    "rules": {
+      "fast": "Keep startup fast and intentional; only place truly app-wide initialization before runApp.",
+      "order": "Preserve initialization order when editing startup files because localization, config, and splash timing depend on it.",
+      "long_lived": "Provide only long-lived global state at the app root; feature-specific blocs usually belong closer to their screens.",
+      "blocking": "Do not block the first frame with avoidable work. If a task can happen later, move it out of startup.",
+      "splash": "Native splash removal should happen when the app actually knows where to send the user, not by a blind delay."
+    },
+    "practice": {
+      "title": "Startup checkpoint",
+      "subtitle": "You understand this module when you can walk the app launch path without opening random files.",
+      "task_1": "List the exact initialization order in main.dart.",
+      "task_2": "Explain why ScreenUtilWrapper lives around MaterialApp instead of inside one screen.",
+      "task_3": "Find where splash is removed and what state change triggers it.",
+      "task_4": "Describe which startup work belongs in main.dart and which work should stay inside a feature."
+    }
+  },
+  "design": {
+    "app_bar": "Design system and responsive UI",
+    "module": "MODULE 3 OF 8",
+    "duration": "35 min",
+    "title": "Build UI from tokens, not guesses.",
+    "intro": "This project already has a visual system. The fastest way to build good screens is to reuse its colors, spacing, typography, borders, shadows, and shared widgets instead of inventing per-screen styles.",
+    "outcome": "By the end, you can find the right theme token, use context helpers, and build pages that stay consistent across light mode, dark mode, and different screen sizes.",
+    "concepts": {
+      "semantic": {
+        "title": "Semantic colors describe purpose",
+        "body": "Use ColorScheme roles and AppColorsExtension roles like success or warning so colors express meaning. This is easier to maintain than scattering raw hex values through widgets."
+      },
+      "tokens": {
+        "title": "Tokens create repeatable spacing and shape",
+        "body": "AppSpacing, AppBorders, AppDurations, AppCurves, and text theme helpers give names to repeated decisions. Named tokens make UI reviews faster because the team speaks one design language."
+      },
+      "responsive": {
+        "title": "ScreenUtil adapts sizing for real devices",
+        "body": "The project uses ScreenUtil so text and spacing scale more safely across phones. Use helpers such as .sp and .r where the codebase already expects responsive sizing."
+      }
+    },
+    "resources": {
+      "theme": "Start here to see how ThemeData is assembled, where Material 3 is enabled, and how custom theme extensions are attached.",
+      "colors": "Read the light and dark palettes to understand semantic color roles instead of treating color as random decoration.",
+      "spacing": "This file explains the spacing scale and when each named gap should be used.",
+      "borders": "Use shared border radii instead of per-widget corner values.",
+      "context": "Context extensions expose colors, typography, semantic app colors, and design tokens with short, readable accessors.",
+      "widgets": "Shared widgets like AppCard show how to consume tokens once and reuse the same visual contract everywhere."
+    },
+    "steps": {
+      "foundation": "Define the theme foundation first: color scheme, text theme, component themes, and theme extensions.",
+      "access": "Expose those values through context extensions so feature code reads cleanly and stays consistent.",
+      "responsive": "Scale text and radii with ScreenUtil where appropriate, especially in compact UI and icon sizing.",
+      "components": "Move repeated visual patterns into shared widgets so screens express intent instead of restyling the same building blocks.",
+      "pages": "Assemble full pages from tokens and shared widgets, then verify them in light mode, dark mode, and smaller screens."
+    },
+    "rules": {
+      "semantic": "Prefer semantic theme roles over hard-coded colors because meaning survives palette changes.",
+      "tokens": "Use AppSpacing and AppBorders before introducing new numbers.",
+      "shared": "Promote repeated UI patterns into shared widgets instead of duplicating style code across features.",
+      "test_modes": "Always check both light and dark appearances and at least one smaller device width.",
+      "magic_numbers": "Avoid magic numbers in layout when a design token or shared widget already communicates the same intent."
+    },
+    "practice": {
+      "title": "Design-system checkpoint",
+      "subtitle": "You understand this module when you can style a new screen without fighting consistency.",
+      "task_1": "Find the file that defines spacing tokens and explain when to use `md` versus `lg`.",
+      "task_2": "Point to the theme extension that stores semantic app colors like success and warning.",
+      "task_3": "Explain why `context.colors.primary` is safer than repeating a hex code in a widget.",
+      "task_4": "Describe when to reach for a shared widget like AppCard instead of styling a Container from scratch."
+    }
+  },
+  "architecture_lesson": {
+    "app_bar": "Feature-first architecture",
+    "module": "MODULE 4 OF 8",
+    "duration": "35 min",
+    "title": "Organize by capability, not by file type alone.",
+    "intro": "Feature-first structure keeps each user capability together. That makes onboarding easier because you can open one feature folder and see the whole flow from screen to data source.",
+    "outcome": "By the end, you can explain where new code belongs, how dependencies should flow, and when to use shared code instead of another feature's internals.",
+    "concepts": {
+      "feature": {
+        "title": "A feature owns one product capability",
+        "body": "For example, auth contains its own domain, data, state, and screens. This keeps changes local and reduces the mental cost of editing the app."
+      },
+      "layers": {
+        "title": "Layers separate responsibility",
+        "body": "Presentation handles UI and user intent, domain defines contracts and entities, and data fulfills those contracts with repositories and transport details."
+      },
+      "shared": {
+        "title": "Shared code is cross-feature infrastructure",
+        "body": "Put code in shared only when unrelated features genuinely need it. Shared should hold reusable building blocks, not become a shortcut around feature boundaries."
+      }
+    },
+    "resources": {
+      "auth_feature": "Use auth as the best current example of a fuller feature because it includes data, domain, presentation, and multiple screens.",
+      "roadmap_feature": "Use learning_roadmap as a simpler feature example focused on presentation and domain data for teaching content.",
+      "data": "See how repository implementation belongs to the feature but depends on shared services.",
+      "domain": "This folder defines the contract that presentation depends on without caring how the data is fetched.",
+      "presentation": "Screens and blocs read domain contracts and render product behavior.",
+      "shared": "Shared folders support many features but should not know about one feature's private details."
+    },
+    "steps": {
+      "route": "A route enters a feature by selecting one of its screens as the public entry point.",
+      "presentation": "The screen or bloc receives user intent and decides what domain work is needed.",
+      "domain": "The domain layer describes what the feature needs through entities and repository contracts.",
+      "data": "The data layer implements those contracts and maps service responses into domain-friendly shapes.",
+      "services": "Shared services talk to external systems such as APIs, storage, or device capabilities."
+    },
+    "rules": {
+      "boundaries": "Do not import another feature's internal files. Cross-feature sharing belongs in shared or behind a public contract.",
+      "shared": "Move code to shared only after it proves reusable across unrelated features.",
+      "simple": "Start with the simplest feature structure that fits. Add more folders when complexity earns them.",
+      "dependencies": "Let dependencies flow inward from presentation toward domain contracts, then outward to data and services.",
+      "widgets": "Widgets should trigger feature behavior, not reach directly into networking or app-wide implementation details."
+    },
+    "practice": {
+      "title": "Architecture checkpoint",
+      "subtitle": "You understand this module when you can place new files confidently and defend that choice.",
+      "task_1": "Choose the correct folder for a feature-specific entity, repository contract, repository implementation, bloc, and screen.",
+      "task_2": "Explain why one feature should not import another feature's private repository implementation.",
+      "task_3": "Describe when a helper belongs in shared instead of inside a feature folder.",
+      "task_4": "Trace one auth flow from presentation to domain to data to services."
+    }
+  },
+  "bloc_lesson": {
+    "app_bar": "BLoC state management",
+    "module": "MODULE 5 OF 8",
+    "duration": "35 min",
+    "title": "Turn user intent into predictable state.",
+    "intro": "BLoC helps this project separate what happened from what the UI should show next. That predictability matters as features gain loading, errors, authentication, and side effects.",
+    "outcome": "By the end, you can read an event flow, understand immutable state changes, and decide whether logic belongs in the widget, bloc, listener, or repository.",
+    "concepts": {
+      "events": {
+        "title": "Events represent user intent or external change",
+        "body": "A button tap, a session check, or a stream update becomes an event. Events tell the bloc what happened without deciding UI rendering directly."
+      },
+      "state": {
+        "title": "State represents what the UI should know",
+        "body": "States are immutable snapshots such as loading, authenticated, or unauthenticated. Clear state shapes make UI rebuilds easy to reason about."
+      },
+      "effects": {
+        "title": "Side effects should be deliberate",
+        "body": "Navigation, snack bars, and toasts are side effects. The cleanest long-term pattern is to keep these in listeners instead of mixing them deeply into business logic."
+      }
+    },
+    "resources": {
+      "auth_bloc": "Study the loading flow for login, signup, and forgot-password handling.",
+      "session_bloc": "Study the session lifecycle, auth-state stream subscription, and splash-related status transitions.",
+      "login_screen": "Look for how the UI reads bloc state and dispatches events based on validated input.",
+      "state_wrapper": "This file shows where app-level blocs are provided to the widget tree.",
+      "agents": "AGENTS.md documents the intended BLoC rules for thin handlers and separation of rebuilds from side effects."
+    },
+    "steps": {
+      "intent": "The user performs an action and the UI dispatches an event that describes the intent.",
+      "loading": "The bloc emits a loading state early so the UI can disable buttons or show progress.",
+      "repository": "The bloc delegates real work to a repository or service instead of owning backend details.",
+      "output": "The result is folded into explicit success or failure outcomes, which then produce the next state.",
+      "effects": "Navigation or user feedback should be handled in a predictable place so logic stays testable."
+    },
+    "rules": {
+      "immutable": "Keep events and states immutable so changes are explicit and rebuild logic stays dependable.",
+      "thin": "Bloc handlers should orchestrate, not become giant business-logic functions.",
+      "listener": "Prefer BlocListener for side effects and BlocBuilder for UI rebuilds; use BlocConsumer only when both are truly needed.",
+      "context": "Passing BuildContext into bloc events works in this template today, but it is a scaling smell you should gradually move away from.",
+      "streams": "Cancel stream subscriptions in close() so long-lived blocs do not leak listeners."
+    },
+    "practice": {
+      "title": "BLoC checkpoint",
+      "subtitle": "You understand this module when you can explain why a piece of logic belongs in one layer instead of another.",
+      "task_1": "Describe the login flow from button tap to state update.",
+      "task_2": "Explain the difference between SessionBloc and AuthBloc in this project.",
+      "task_3": "Point out one side effect in the current auth flow and explain where you would ideally move it over time.",
+      "task_4": "Explain why immutable states are easier to debug than mutable objects shared across widgets."
+    }
+  },
+  "routing_lesson": {
+    "app_bar": "Routing and navigation",
+    "module": "MODULE 6 OF 8",
+    "duration": "30 min",
+    "title": "Keep navigation centralized and teachable.",
+    "intro": "Routing becomes hard when paths are scattered. This project keeps routes in one place so you can add pages, redirects, and future deep links without hunting through widgets.",
+    "outcome": "By the end, you can add a new route correctly, choose between push and go, and understand where global navigation decisions belong.",
+    "concepts": {
+      "constants": {
+        "title": "Route constants prevent string drift",
+        "body": "AppRoutes collects path constants so widgets and wrappers do not repeat hard-coded strings. This reduces typos and keeps rename operations simple."
+      },
+      "router": {
+        "title": "GoRouter is the source of truth",
+        "body": "app_router.dart maps paths to screens and sets initialLocation. Central registration makes onboarding and debugging faster."
+      },
+      "navigation": {
+        "title": "Stack behavior is a product decision",
+        "body": "Use push for drill-down flows you want to return from and go for replacing the current flow, such as auth or app-wide redirect behavior."
+      }
+    },
+    "resources": {
+      "routes": "Read all path constants first so you know which URLs the app officially supports.",
+      "router": "Study route registration order, initialLocation, and how lesson screens are wired.",
+      "global": "Use the root navigator key only when navigation or overlays must happen outside a local widget context.",
+      "session": "This wrapper shows global navigation tied to session changes rather than local screen code.",
+      "roadmap": "This page shows ordinary user-driven navigation with context.push from a list."
+    },
+    "steps": {
+      "constants": "Define a path constant before writing widget navigation so the route has one canonical source.",
+      "register": "Register the route in app_router.dart with a builder that points to the feature entry screen.",
+      "navigate": "Choose push or go based on whether the previous page should stay on the stack.",
+      "global": "Handle app-wide decisions like session redirects in shared routing flow, not in random screen build methods.",
+      "maintain": "Keep route names stable and intentional so future deep links, tests, and docs stay aligned."
+    },
+    "rules": {
+      "central": "Do not scatter route tables across features when the project standard is a centralized router.",
+      "push_go": "Use push for detail or learning flows; use go for replacing a completed flow such as login success.",
+      "guards": "Put redirects and guards in router configuration or global wrappers, not inside individual screen builds.",
+      "stable": "Avoid changing route strings casually because tests, bookmarks, and future deep links depend on stability.",
+      "deeplink": "Design paths as if someone might open them directly later, even if deep linking is not fully used yet."
+    },
+    "practice": {
+      "title": "Routing checkpoint",
+      "subtitle": "You understand this module when you can add or debug a route without trial and error.",
+      "task_1": "Add a mental model for when to use `context.push()` and when to use `context.go()`.",
+      "task_2": "Find the app's `initialLocation` and explain why that screen opens first.",
+      "task_3": "Explain why `appRouter.go(...)` is used in the session wrapper instead of relying only on a local BuildContext.",
+      "task_4": "Describe the three files you would edit to add a brand-new learning module screen."
+    }
+  },
+  "services_lesson": {
+    "app_bar": "Services and failures",
+    "module": "MODULE 7 OF 8",
+    "duration": "40 min",
+    "title": "Move risky work behind safe abstractions.",
+    "intro": "Network calls, storage, permissions, and device APIs can fail in many ways. This project wraps that uncertainty with shared services, typed failures, and repository mapping so the UI receives predictable results.",
+    "outcome": "By the end, you can trace how data moves from a service to a repository to a bloc, and explain why `FutureEither` and `Failure` make error handling cleaner.",
+    "concepts": {
+      "services": {
+        "title": "Services talk to the outside world",
+        "body": "Services own shared integration details such as Dio requests, storage reads, permission checks, and path lookups. They reduce duplication across features."
+      },
+      "repositories": {
+        "title": "Repositories translate transport into domain language",
+        "body": "Repositories call services and map raw maps or responses into feature entities and contracts. This keeps blocs from depending on backend payload shapes."
+      },
+      "failures": {
+        "title": "Failures make errors explicit",
+        "body": "Instead of throwing raw exceptions into UI code, the template uses `Either<Failure, T>` so success and failure are both first-class, readable outcomes."
+      }
+    },
+    "resources": {
+      "auth_service": "Study how auth requests, auth-state stream updates, and logout behavior are centralized in one service.",
+      "config": "The shared Dio instance is created here so features do not instantiate networking clients on their own.",
+      "task_runner": "This helper checks network availability when needed, catches exceptions, logs them, and maps them into failures.",
+      "failure": "These small classes define the error vocabulary used by services, repositories, and blocs.",
+      "repository": "Read how auth repository implementation maps response data into AppUser and returns typed failures upward.",
+      "dio_service": "This generic wrapper shows the pattern for using the shared Dio client beyond auth-specific requests."
+    },
+    "steps": {
+      "use_case": "Start from the feature need, not from the API call. Ask what the screen is trying to accomplish.",
+      "service": "Use a shared service to talk to Dio, storage, media, or permissions instead of creating those integrations inside widgets.",
+      "guard": "Wrap async work with runTask so connectivity and exceptions become predictable application outcomes.",
+      "map": "Map transport responses into domain entities or nullable results before sending them back to presentation.",
+      "returning": "Return success or typed failure explicitly so blocs can fold results and show appropriate UI."
+    },
+    "rules": {
+      "shared_dio": "Use AppConfig.dio or existing services; do not create a fresh Dio client inside a screen or bloc.",
+      "no_context": "Do not pass BuildContext into services. Shared integrations should not depend on widget lifecycles.",
+      "no_raw_errors": "Map raw transport failures into Failure objects instead of leaking DioException into UI code.",
+      "empty_catch": "Never use empty catch blocks. Log, map, or rethrow with intention.",
+      "entities": "Repositories should return domain-friendly shapes, not raw backend maps, whenever the feature depends on stable meaning."
+    },
+    "practice": {
+      "title": "Services checkpoint",
+      "subtitle": "You understand this module when you can follow a request path and explain where each responsibility changes hands.",
+      "task_1": "Trace the current auth check flow from SessionBloc to repository to service to Dio.",
+      "task_2": "Explain why `runTask()` lives in utils instead of inside one specific feature.",
+      "task_3": "Point to where a `NetworkFailure` can be produced before an HTTP request even runs.",
+      "task_4": "Describe why mapping `Map<String, dynamic>` into `AppUser` in the repository is useful."
+    }
+  },
+  "production": {
+    "app_bar": "Production workflow",
+    "module": "MODULE 8 OF 8",
+    "duration": "30 min",
+    "title": "Ship changes with a repeatable checklist.",
+    "intro": "Good structure helps only when the team verifies changes consistently. This project already defines a workflow around formatting, analysis, tests, localization, asset registration, setup docs, and secret safety.",
+    "outcome": "By the end, you can finish a change with the same reliable steps every time instead of relying on memory or luck.",
+    "concepts": {
+      "loop": {
+        "title": "A production workflow reduces avoidable regressions",
+        "body": "Formatting, static analysis, tests, and targeted device checks catch mistakes while the change is still fresh in your head."
+      },
+      "localization": {
+        "title": "Text and assets are part of the feature",
+        "body": "When you add copy, fonts, icons, or images, you are changing app behavior. Register them properly in translations and pubspec so other devices and locales still work."
+      },
+      "safety": {
+        "title": "Docs and guardrails protect future teammates",
+        "body": "SETUP.md, DESIGN.md, and AGENTS.md reduce repeated confusion. Keeping these accurate is part of maintaining production quality."
+      }
+    },
+    "resources": {
+      "pubspec": "Use this file to confirm dependencies, fonts, and assets are declared correctly before blaming runtime bugs.",
+      "translations": "These files hold user-facing text. Keep them in sync when features add labels or messages.",
+      "tests": "Widget tests are a fast way to verify routing and core UI behavior without manual tapping every time.",
+      "analysis": "Static analysis catches inconsistent or risky code before you run the full app.",
+      "guides": "These root guides hold the team's setup, architecture, design, and workflow expectations."
+    },
+    "steps": {
+      "change": "Implement the product change in the correct feature or shared layer first.",
+      "register": "Update supporting files such as routes, assets, fonts, translations, or environment-aware setup when the change needs them.",
+      "quality": "Run formatting, analysis, and automated tests so you catch structural issues before manual QA.",
+      "verify": "Test the important user flow on a device or emulator, especially navigation, async loading, and error states.",
+      "handoff": "Document caveats, setup changes, and follow-up risks so the next person does not need to rediscover them."
+    },
+    "rules": {
+      "analyze": "Run `flutter analyze` before considering a feature finished.",
+      "localization": "When you change user-facing text, update translation files and any required generation steps.",
+      "secrets": "Do not commit real secrets. Keep environment values and sensitive setup in the approved project places.",
+      "tests": "Add or update tests for changed flows, especially startup behavior, routing, and state-driven screens.",
+      "notes": "Call out known limitations and environment-specific issues clearly instead of hiding them."
+    },
+    "practice": {
+      "title": "Production checkpoint",
+      "subtitle": "You understand this module when you can close a task with confidence and explain what you verified.",
+      "task_1": "Name the standard verification commands expected after app changes.",
+      "task_2": "Explain what must be updated when you add a new translated label or a new bundled asset.",
+      "task_3": "Describe why tests and analyzer belong in the normal development loop instead of only before release.",
+      "task_4": "Explain where you would document a setup-sensitive change or a known limitation for teammates."
+    }
+  },
+  "auth": {
+    "log_in": "Log in",
+    "log_in_subtitle": "Enter your email and password",
+    "email": "Email",
+    "email_required": "Email is required",
+    "email_invalid": "Enter a valid email",
+    "password": "Password",
+    "password_required": "Password is required",
+    "password_too_short": "Password must be at least 6 characters",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot Password",
+    "login_button": "Login",
+    "dont_have_account": "Don't have an account? ",
+    "sign_up": "Sign Up",
+    "create_account": "Create Account",
+    "create_account_subtitle": "Create a new account to get started.",
+    "name": "Name",
+    "name_required": "Name is required",
+    "confirm_password": "Confirm Password",
+    "confirm_password_required": "Confirm password is required",
+    "passwords_do_not_match": "Passwords do not match",
+    "create_account_button": "Create Account",
+    "already_have_account": "Already have an account? ",
+    "sign_in": "Sign In",
+    "or_continue_with": "Or Continue With Account",
+    "forgot_password_title": "Forgot Password",
+    "forgot_password_subtitle": "Enter your email address to receive a reset link\nand regain access to your account.",
+    "reset_link_sent": "Password reset link sent to your email."
+  }
+}
